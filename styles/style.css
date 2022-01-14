@@ -130,15 +130,17 @@ hr.solid {
   .faq-card {
     display: flex;
     flex-direction: row;
-    width: 900px;
-    height: 650px;
+    width: 1000px;
+    height: 600px;
     position: relative;
     margin: 180px auto 30px auto;
   }
 
   .faq-container {
+    width: 45%;
     margin-top: -50px;
-    width: 50%;
+    margin-left: auto;
+    margin-right: 30px;
   }
 
   .title {
@@ -146,16 +148,26 @@ hr.solid {
     font-weight: 700;
     text-align: left;
   }
-  /* .question {
-    margin-right: 30px;
-  } */
+
+  .question {
+    padding-right: 30px;
+  }
 
   .desktop-illustration {
     display: flex;
-    margin-top: 100px;
+    position: absolute;
+    top: -85px;
+    left: -80px;
+    width: 50%;
+    margin-top: 200px;
   }
 
   .illustration-shadow-desktop {
+    display: block;
+    width: 50%;
+    top: 110px;
+    left: -50px;
+    position: absolute;
   }
 
   .mobile-illustration {
