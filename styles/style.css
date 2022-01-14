@@ -39,7 +39,7 @@ main {
 
 .faq-card {
   width: 375px;
-  height: 650px;
+  height: auto;
   background-color: #fff;
   border-radius: 25px;
   position: relative;
@@ -53,7 +53,7 @@ main {
   width: 70%;
 }
 
-.illustration-shadow {
+.illustration-shadow-mobile {
   position: absolute;
   left: 60px;
 }
@@ -62,24 +62,31 @@ main {
   display: none;
 }
 
+.illustration-shadow-desktop {
+  display: none;
+}
+
 .title {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  margin: 130px auto 60px auto;
+  margin: 130px auto 20px auto;
+}
+
+.faq-container {
+  margin: auto 20px 100px 20px;
 }
 
 .question-container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  height: auto;
 }
 
 .question {
   display: flex;
   text-align: left;
   font-size: 1rem;
-  margin: auto 20px;
 }
 
 .answer {
@@ -89,6 +96,11 @@ main {
 .select-arrow {
   width: 12px;
   height: 10px;
+}
+
+label {
+  margin-left: auto;
+  margin-top: 20px;
 }
 
 .select-arrow:hover {
@@ -105,10 +117,52 @@ input[type="checkbox"]:checked ~ p {
   display: flex;
   text-align: left;
   font-size: 1rem;
-  margin: 10px 20px;
-  max-height: 60px;
+  margin: 10px auto;
+  max-height: auto;
+  transition: 0.4s ease;
 }
 
 hr.solid {
   border-top: 3px solid -var(--clr-dividers-light-grayish-blue);
+}
+
+@media screen and (min-width: 1000px) {
+  .faq-card {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    height: 650px;
+    position: relative;
+    margin: 180px auto 30px auto;
+  }
+
+  .faq-container {
+    margin-top: -50px;
+    width: 50%;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  /* .question {
+    margin-right: 30px;
+  } */
+
+  .desktop-illustration {
+    display: flex;
+    margin-top: 100px;
+  }
+
+  .illustration-shadow-desktop {
+  }
+
+  .mobile-illustration {
+    display: none;
+  }
+
+  .illustration-shadow-mobile {
+    display: none;
+  }
 }
