@@ -146,7 +146,7 @@ input[type="checkbox"]:checked ~ .answer {
 #faq-text-toggle-1,
 #faq-text-toggle-2,
 #faq-text-toggle-3 #faq-text-toggle-4,
-#faq-text-toggle-5:checked ~ .answer::after {
+#faq-text-toggle-5:checked ~ .answer {
   display: flex;
   text-align: left;
   font-size: 1rem;
