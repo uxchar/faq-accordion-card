@@ -44,6 +44,7 @@ main {
   border-radius: 25px;
   position: relative;
   margin: 180px auto 30px auto;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .mobile-illustration {
@@ -103,6 +104,11 @@ main {
   display: none;
 }
 
+.question:hover {
+  color: var(--clr-soft-red);
+  cursor: pointer;
+}
+
 .select-arrow {
   width: 15px;
   height: 13px;
@@ -117,7 +123,7 @@ main {
   margin-top: 20px;
 }
 
-/* This website helped me solve toggling without the use of js
+/* This webpage helped me solve toggling without the use of js
 https://css-tricks.com/the-checkbox-hack/ */
 
 input[type="checkbox"] {
@@ -137,9 +143,27 @@ input[type="checkbox"]:checked ~ .answer {
   transition: 0.4s ease;
 }
 
-input[type="checkbox"]:checked ~ .question {
-  color: #000;
+#faq-text-toggle-1,
+#faq-text-toggle-2,
+#faq-text-toggle-3 #faq-text-toggle-4,
+#faq-text-toggle-5:checked ~ .answer::after {
+  display: flex;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--clr-txt-very-dark-grayish-blue);
+  margin: -10px auto 10px auto;
+  max-height: auto;
+  transition: 0.4s ease;
 }
+
+/* #text-color,
+#text-color-2,
+#text-color-3,
+#text-color-4,
+#text-color-5:checked ~ .question::after {
+  color: #000;
+} */
 
 input[type="checkbox"]:checked ~ .arrow {
   transform: rotate(180deg);
@@ -154,7 +178,7 @@ hr.solid {
   .faq-card {
     display: flex;
     flex-direction: row;
-    width: 900px;
+    width: 950px;
     height: auto;
     min-height: 500px;
     position: relative;
@@ -163,10 +187,10 @@ hr.solid {
   }
 
   .faq-container {
-    width: 45%;
+    width: 40%;
     margin-top: -50px;
     margin-left: auto;
-    margin-right: 30px;
+    margin-right: 100px;
   }
 
   .title {
@@ -178,6 +202,9 @@ hr.solid {
   .question {
     padding-right: 30px;
   }
+
+  /* This webpage helped me with absolute positioning of the image elements over the main card div
+https://css-tricks.com/absolute-positioning-inside-relative-positioning/ */
 
   .desktop-illustration {
     display: flex;
