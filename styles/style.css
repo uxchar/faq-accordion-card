@@ -12,14 +12,14 @@
   --clr-dividers-light-grayish-blue: hsl(240, 5%, 91%);
 }
 
-/* html {
+html {
   box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-} */
+}
 
 body {
   font-family: "Kumbh Sans", sans-serif;
@@ -66,15 +66,23 @@ main {
   display: none;
 }
 
+.illustration-pattern-desktop {
+  display: none;
+}
+
+.illustration-box-desktop {
+  display: none;
+}
+
+.faq-container {
+  margin: auto 20px 100px 20px;
+}
+
 .title {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
   margin: 130px auto 20px auto;
-}
-
-.faq-container {
-  margin: auto 20px 100px 20px;
 }
 
 .question-container {
@@ -87,6 +95,8 @@ main {
   display: flex;
   text-align: left;
   font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-txt-dark-grayish-blue);
 }
 
 .answer {
@@ -94,18 +104,21 @@ main {
 }
 
 .select-arrow {
-  width: 12px;
-  height: 10px;
-}
-
-label {
-  margin-left: auto;
-  margin-top: 20px;
+  width: 15px;
+  height: 13px;
 }
 
 .select-arrow:hover {
   cursor: pointer;
 }
+
+.arrow {
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+/* This website helped me solve toggling without the use of js
+https://css-tricks.com/the-checkbox-hack/ */
 
 input[type="checkbox"] {
   position: absolute;
@@ -113,27 +126,40 @@ input[type="checkbox"] {
   left: -9999px;
 }
 
-input[type="checkbox"]:checked ~ p {
+input[type="checkbox"]:checked ~ .answer {
   display: flex;
   text-align: left;
   font-size: 1rem;
-  margin: 10px auto;
+  font-weight: 400;
+  color: var(--clr-txt-very-dark-grayish-blue);
+  margin: -10px auto 10px auto;
   max-height: auto;
   transition: 0.4s ease;
 }
 
+input[type="checkbox"]:checked ~ .question {
+  color: #000;
+}
+
+input[type="checkbox"]:checked ~ .arrow {
+  transform: rotate(180deg);
+  margin-bottom: 30px;
+}
+
 hr.solid {
-  border-top: 3px solid -var(--clr-dividers-light-grayish-blue);
+  border-top: 1px solid var(--clr-dividers-light-grayish-blue);
 }
 
 @media screen and (min-width: 1000px) {
   .faq-card {
     display: flex;
     flex-direction: row;
-    width: 1000px;
-    height: 600px;
+    width: 900px;
+    height: auto;
+    min-height: 500px;
     position: relative;
-    margin: 180px auto 30px auto;
+    flex-wrap: wrap;
+    margin: auto 0;
   }
 
   .faq-container {
@@ -156,7 +182,7 @@ hr.solid {
   .desktop-illustration {
     display: flex;
     position: absolute;
-    top: -85px;
+    top: -110px;
     left: -80px;
     width: 50%;
     margin-top: 200px;
@@ -164,10 +190,26 @@ hr.solid {
 
   .illustration-shadow-desktop {
     display: block;
-    width: 50%;
-    top: 110px;
-    left: -50px;
+    width: 60%;
+    top: 75px;
+    left: -175px;
     position: absolute;
+    overflow: hidden;
+  }
+
+  .illustration-box-desktop {
+    display: block;
+    position: absolute;
+    top: 220px;
+    left: -100px;
+  }
+
+  .illustration-pattern-desktop {
+    width: 60%;
+    top: -180px;
+    left: -550px;
+    position: absolute;
+    overflow: hidden;
   }
 
   .mobile-illustration {
