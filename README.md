@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-[![Screenshot-2022-01-15-at-13-02-21-Frontend-Mentor-FAQ-Accordion-Card.png](https://i.postimg.cc/SQ6fgX7p/Screenshot-2022-01-15-at-13-02-21-Frontend-Mentor-FAQ-Accordion-Card.png)](https://postimg.cc/G9pD2m5M)
+[![Screenshot-2022-01-15-at-14-36-56-Frontend-Mentor-FAQ-Accordion-Card.png](https://i.postimg.cc/fy1tvQWC/Screenshot-2022-01-15-at-14-36-56-Frontend-Mentor-FAQ-Accordion-Card.png)](https://postimg.cc/1Vc39TqV)
 
 ### Links
 
